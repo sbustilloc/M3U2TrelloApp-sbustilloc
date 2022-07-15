@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="./asset/favicon.ico" type="image/x-icon">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    <link rel="stylesheet" href="./asset/css/style.css" >
+    <title>Actividad Trello</title>
+  </head>
+  <body>
+    <!-- Tareas -->
+      <!-- Columnas tareas por hacer -->
+    <header class="header">
+        <div class="header-top">
+            <img src="./asset/images/logo5C.png" alt="5C" width="250pc">
+            <button type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#createModal">Agregar Tarea</button>
+        </div>
+    </header>
+    <main>
+        <div class="row">
+            <p></p>
+            <h2 class="card card-header">TRELLO - Asignación de Tareas</h2>
+            <p></p>
+            <div class="col-md-4">
+                <div class="card mb-4 rounded-3 shadow-sm"  style="min-height: 100%">
+                    <div class="card-header alert alert-danger py-3">
+                        <h3><i class="fa fa-clipboard-list"></i>Por Hacer</h3>
+                    </div>    
+                    <div id="todoTask" class="card-body" ></div>
+                </div>
+            </div>
+            <!-- Columnas Progreso -->
+            <div class="col-md-4">
+                <div class="card mb-4 rounded-3 shadow-sm"  style="min-height: 100%">
+                    <div class="card-header alert alert-warning py-3">
+                        <h3><i class="fa fa-clipboard-list-check"></i> En Progreso</h3>
+                    </div>    
+                    <div id="progressTask" class="card-body" ></div>
+                </div>
+            </div>
+            <!-- Columnas Finalizado -->
+            <div class="col-md-4">
+                <div class="card mb-4 rounded-3  shadow-sm"  style="min-height: 100%">
+                    <div class="card-header alert alert-success py-3">
+                        <h3><i class="fa fa-clipboard-check"></i> Finalizado</h3>
+                    </div>    
+                    <div id="progressTask" class="card-body" ></div>
+                </div>
+            </div>
+            
+        </div>
+    </main>
+    <!-- Form ingreso -->
+        <div class="modal fade" id="createModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+              <div class="modal-content">
+                <div class="modal-header alert alert-info">
+                    <h5 class="modal-title ">Crear nueva tarea</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <form action="#"></form>
+                    <div class="modal-body">
+                    
+                        <div class="form-group">
+                            <label for="title-task" class="form-label">Título</label>
+                            <input type="text" class="form-control" id="titleTask" placeholder="Ingrese el título de la tarea">
+                        </div>
+                        <div class="form-group">
+                            <label for="title-task" class="form-label">Descripción</label>
+                            <textarea class="form-control" id="descriptionTask" placeholder="Ingrese la descripción de la tarea"></textarea>
+                        </div>
+                        <div class="form-group">
+                            <label for="responsible-task" class="form-label">Responsable</label>
+                            <select class="form-control" id="responsibleTask" >
+                                <option value="">-- Seleccione --</option>
+                                <option value="Pedro">Pedro Perez</option>
+                                <option value="Pedro">Pedro Perez</option>
+                                <option value="Pedro">Pedro Perez</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="time-task" class="form-label">Plazo Entrega</label>
+                            <select class="form-control" id="timeTask" >
+                                <option value="">-- Seleccione --</option>
+                                <option value="1">1 Día</option>
+                                <option value="2">2 Días</option>
+                                <option value="7">1 Semana</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                        <button type="button" class="btn btn-primary">Crear Tarea</button>
+                    </div>
+                </form>
+              </div>
+            
+            </div>
+        </div>
+
+
+    
+</body>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="./index.js"></script>
+</html>
