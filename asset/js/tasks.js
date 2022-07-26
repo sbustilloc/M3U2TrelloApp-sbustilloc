@@ -14,7 +14,7 @@ form.addEventListener('submit', (ev) => {
     // deadline: formData.deadLineTask.value,
     deadline: Number(moment().add(formData.deadLineTask.value, 'days').format('X')),
     created: Number(moment().format("X")),
-    state: 'todo'
+    state: 'pending'
   };
   // Hacemos una petición POST para enviar la información a la API y le pasamos el arreglo data con la información nueva
   axios.post(`${ApiURL}/task`, data)
