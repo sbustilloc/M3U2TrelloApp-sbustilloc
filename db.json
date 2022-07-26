@@ -5,7 +5,7 @@
             "title" : "Frontend",
             "person" : "Sandra B",
             "details" : "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
-            "state" : "done",
+            "state" : "pending",
             "deadline" : "1658450665",
             "created" : "2037141864"
 
@@ -17,7 +17,7 @@
             "title" : "Backend",
             "person" : " Pedro P",
             "details" : "Lorem Ipsum has been the industry's standard dummy text ever since the 1500s",
-            "state" : "done",
+            "state" : "progress",
             "deadline" : "1658450665",
             "created" : "2037141864"
 
