@@ -2,7 +2,7 @@ const ApiURL = "https://my-json-server.typicode.com/sbustilloc/M3U2TrelloApp-sbu
 
 //Hacemos una petición get a la API Fake utlizando los templates strings
 axios
-  .get(`${ApiURL}/tasks`)
+  .get(`${ApiURL}/task`)
   .then((res) => showAllTasks(res.data))
   .catch((err) => console.error(err));
 
@@ -18,40 +18,36 @@ const createTask = (task) => {
   newTask.classList.add("card");
 
   // Creamos un H3 para el titulo de las tarjetas
-  let taskTitle = document.createElement("h3");
+  let taskTitle = document.createElement("h5");
   // le añadimos una clase card-task__title
   taskTitle.classList.add("card-title");
   // y le añadimos el title de nuestra API "task.title"
-  taskTitle.innerText = task.title;
+  taskTitle.innerText = ` ${task.title}`;
 
   //creamos una etiqueta parrafo
   let taskResponsible = document.createElement("p");
   //le añadimos una clase card-task__responsible
-  taskResponsible.classList.add("text-danger");
+  taskResponsible.classList.add("text");
   // le pasamos los datos del responsable de la tarea desde la API
-  taskResponsible.innerHTML = `<span class="card_task__responsible--tag-creator">Responsable:</span> ${task.person}`;
+  taskResponsible.innerHTML = `<small class="text"><strong>Responsable:</strong></small> ${task.person}`;
 
   // Creamos una etiqueta parrafo
   let taskDetails = document.createElement("p");
   //le añadimos una clase card-task__details
   taskDetails.classList.add("text");
   // Le pasamos los datos desde la API y los imprimimos en las tarjetas
-  taskDetails.innerHTML = `<span class="card-task__details--task-details">Descripción:</span> ${task.details} `;
+  taskDetails.innerHTML = `<small class="text"><strong>Descripción:</strong></small> ${task.details} `;
 
   //Creamos una etiqueta parrafo para crear la fecha
   let taskDate = document.createElement("p");
   //le pasamos la clase card-task__date
-  taskDate.classList.add("text-info");
+  taskDate.classList.add("text");
   // Le añadimos la fecha que traemos desde la API utilizando los template string
-  taskDate.innerHTML = `<span class="card-task__date--tag-date">Plazo:</span> ${dateFormat(
-    task.deadline
-  )}`;
+  taskDate.innerHTML = `<small class="text"><strong>Plazo:</strong></small> ${dateFormat(task.deadline)}`;
 
   let taskCreate = document.createElement("p");
-  taskCreate.classList.add("text-info");
-  taskCreate.innerHTML = `<span class="card-task__date--tag-date">Creación:</span> ${dateFormat(
-    task.created
-  )}`;
+  taskCreate.classList.add("text");
+  taskCreate.innerHTML = `<small class="text"><strong>Creación:</strong></small> ${dateFormat(task.created)}`;
 
   newTask.appendChild(taskTitle);
   newTask.appendChild(taskResponsible);

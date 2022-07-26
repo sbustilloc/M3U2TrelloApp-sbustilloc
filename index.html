@@ -28,7 +28,7 @@
                     <div class="card-header alert alert-danger py-3">
                         <h3><i class="fa fa-clipboard-list"></i>Por Hacer</h3>
                     </div>    
-                    <div id="todoTask" class="card-body" ></div>
+                    <div id="todoTasks" class="card-body" ></div>
                 </div>
             </div>
             <!-- Columnas Progreso -->
@@ -37,7 +37,7 @@
                     <div class="card-header alert alert-warning py-3">
                         <h3><i class="fa fa-clipboard-list-check"></i> En Progreso</h3>
                     </div>    
-                    <div id="progressTask" class="card-body" ></div>
+                    <div id="progressTasks" class="card-body" ></div>
                 </div>
             </div>
             <!-- Columnas Finalizado -->
@@ -46,7 +46,7 @@
                     <div class="card-header alert alert-success py-3">
                         <h3><i class="fa fa-clipboard-check"></i> Finalizado</h3>
                     </div>    
-                    <div id="doneTask" class="card-body" ></div>
+                    <div id="doneTasks" class="card-body" ></div>
                 </div>
             </div>
             
@@ -60,7 +60,7 @@
                     <h5 class="modal-title ">Crear nueva tarea</h5>
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
-                <form action="#"></form>
+                <form  id="formTask">
                     <div class="modal-body">
                     
                         <div class="form-group">
@@ -69,7 +69,7 @@
                         </div>
                         <div class="form-group">
                             <label for="title-task" class="form-label">Descripción</label>
-                            <textarea class="form-control" id="descriptionTask" placeholder="Ingrese la descripción de la tarea"></textarea>
+                            <textarea class="form-control" id="detailsTask" placeholder="Ingrese la descripción de la tarea"></textarea>
                         </div>
                         <div class="form-group">
                             <label for="responsible-task" class="form-label">Responsable</label>
@@ -82,7 +82,7 @@
                         </div>
                         <div class="form-group">
                             <label for="time-task" class="form-label">Plazo Entrega</label>
-                            <select class="form-control" id="timeTask" >
+                            <select class="form-control" id="deadLineTask" >
                                 <option value="">-- Seleccione --</option>
                                 <option value="1">1 Día</option>
                                 <option value="2">2 Días</option>
@@ -92,7 +92,7 @@
                     </div>
                     <div class="modal-footer">
                         <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
-                        <button type="button" class="btn btn-primary">Crear Tarea</button>
+                        <button type="submit" class="btn btn-primary">Crear Tarea</button>
                     </div>
                 </form>
               </div>
@@ -112,4 +112,5 @@
 
     <script src="./api/request.js"></script>
     <script src="./asset/js/index.js"></script>
+    <script src="./asset/js/tasks.js"></script>
 </html>
