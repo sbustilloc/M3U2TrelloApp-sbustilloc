@@ -7,9 +7,9 @@ axios
   .catch((err) => console.error(err));
 
 // Filtramos toda la información que recibimos de la API y la mapeamos
-const showAllTasks = (data) => {
-  data.map((task) => createTask(task));
-};
+function showAllTasks(data) {
+    data.map((task) => createTask(task));
+}
 
 const createTask = (task) => {
   // Creamos la estructura de las tarjetas desde el JS
