@@ -1,0 +1,39 @@
+{
+    "task" : [
+        {
+            "id" : 1 ,
+            "title" : "Frontend",
+            "person" : "Sandra B",
+            "details" : "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
+            "state" : "done",
+            "deadline" : "1658450665",
+            "created" : "2037141864"
+
+
+        },
+
+        {
+            "id" : 2 ,
+            "title" : "Backend",
+            "person" : " Pedro P",
+            "details" : "Lorem Ipsum has been the industry's standard dummy text ever since the 1500s",
+            "state" : "done",
+            "deadline" : "1658450665",
+            "created" : "2037141864"
+
+        },
+
+        {
+            "id" : 3 ,
+            "title" : "Frontend",
+            "person" : "Pedro P",
+            "details" : "It is a long established fact that a reader will be distracted by the readable",
+            "state" : "done",
+            "deadline" : "1658450665",
+            "created" : "2037141864"
+
+        }
+        
+
+    ]
+}
